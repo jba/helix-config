@@ -1,0 +1,53 @@
+# Based on the default base16 theme obtained with 
+#    wget https://raw.githubusercontent.com/helix-editor/helix/master/base16_theme.toml
+
+"ui.menu" = { fg = "black", bg = "white" }
+"ui.menu.selected" = { modifiers = ["reversed"] }
+"ui.linenr" = { fg = "gray", bg = "black" }
+"ui.popup" = { modifiers = ["reversed"] }
+"ui.linenr.selected" = { fg = "white", bg = "black", modifiers = ["bold"] }
+"ui.selection" = { fg = "black", bg = "blue" }
+"ui.selection.primary" = { fg = "white", bg = "blue" }
+"ui.text.inactive" = { fg = "gray" }
+"ui.statusline" = { fg = "black", bg = "white" }
+"ui.statusline.inactive" = { fg = "gray", bg = "white" }
+"ui.cursor" = { fg = "99", modifiers = ["reversed"] }
+"ui.cursor.match" = { fg = "yellow", modifiers = ["underlined"] }
+"ui.cursor.primary.insert" = { fg = "99", modifiers = ["underlined"]}
+
+"comment" = { fg = "green", modifiers = ["italic"] }
+"variable" = "white"
+"constant" = "white"
+"attributes" = "yellow"
+"type" = "white"
+"string"  = "white"
+"variable.other.member" = "white"
+"constant.character.escape" = "cyan"
+"function" = "75"
+"constructor" = "white"
+"special" = "white"
+"keyword" = "white"
+"label" = "magenta"
+"namespace" = "white"
+"ui.help" = { fg = "white", bg = "black" }
+
+"markup.heading" = "blue"
+"markup.list" = "red"
+"markup.bold" = { fg = "yellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "magenta", modifiers = ["italic"] }
+"markup.link.url" = { fg = "yellow", modifiers = ["underlined"] }
+"markup.link.text" = "red"
+"markup.quote" = "cyan"
+"markup.raw" = "green"
+
+"diff.plus" = "green"
+"diff.delta" = "yellow"
+"diff.minus" = "red"
+
+"diagnostic" = { modifiers = ["underlined"] }
+"ui.gutter" = { bg = "black" }
+"info" = "blue"
+"hint" = "gray"
+"debug" = "gray"
+"warning" = "yellow"
+"error" = "red"
