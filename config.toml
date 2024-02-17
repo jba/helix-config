@@ -9,6 +9,8 @@ auto-info = true
 scrolloff = 4
 mouse = false
 
+# Circa late 2023, this didn't work for me and I had
+# to do something in themes/jba.toml.
 # [editor.cursor-shape]
 # insert = "bar"
 # normal = "block"
