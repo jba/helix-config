@@ -4,17 +4,41 @@ theme = "jba"
 line-number = "relative"
 auto-pairs = true
 auto-save = true
+auto-reload = true
+auto-info = true
+scrolloff = 4
+mouse = false
 
 [editor.gutters.line-numbers]
 min-width = 1
+
+[editor.soft-wrap]
+enable = true
+
+[editor.lsp]
+display-signature-help-docs = false
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+git-global = false
+git-exclude = false
 
 # [editor.cursor-shape]
 # insert = "bar"
 # normal = "block"
 # select = "underline"
 
-[keys.normal."space"]
-o = "file_picker_in_current_buffer_directory"
+[keys.normal]
+"$" = ["ensure_selections_forward", "extend_to_line_end"]
+# "$" = "goto_line_end"
+# the below removes all other v bindings
+# v = { "$" = "extend_to_line_end"}
+"C-v" = "page_down"
+"A-v" = "page_up"
+"space" = { o = "file_picker_in_current_buffer_directory" }
+"S-down" = "extend_line_down"
+"S-up" = "extend_line_up"
 
 [keys.insert]
 "C-f" = "move_char_right"

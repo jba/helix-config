@@ -1,0 +1,17 @@
+# Defaults are baked into the helix binary.
+# See https://github.com/helix-editor/helix/blob/master/languages.toml.
+# This file overrides them.
+
+[language-server.gopls]
+command = "gopls" 
+args = ["-logfile=/tmp/gopls.log", "-v", "-rpc.trace"]
+
+[language-server.gopls.config]
+usePlaceholders = true
+formatting.gofumpt = true
+moose = 1
+
+[[languages]]
+name = "go"
+# The built-in config has a language server that I don't want.
+language-servers = [ "gopls"] #, "golangci-lint-lsp" ]

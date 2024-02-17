@@ -2,7 +2,8 @@
 #    wget https://raw.githubusercontent.com/helix-editor/helix/master/base16_theme.toml
 
 "ui.menu" = { fg = "black", bg = "white" }
-"ui.menu.selected" = { modifiers = ["reversed"] }
+# "ui.menu.selected" = { modifiers = ["reversed"] }
+"ui.menu.selected" = { fg = "black", bg = "yellow"}
 "ui.linenr" = { fg = "gray", bg = "black" }
 "ui.popup" = { modifiers = ["reversed"] }
 "ui.linenr.selected" = { fg = "white", bg = "black", modifiers = ["bold"] }
@@ -14,6 +15,7 @@
 "ui.cursor" = { fg = "99", modifiers = ["reversed"] }
 "ui.cursor.match" = { fg = "yellow", modifiers = ["underlined"] }
 "ui.cursor.primary.insert" = { fg = "99", modifiers = ["underlined"]}
+"ui.virtual.ruler" = { bg = "gray" }
 
 "comment" = { fg = "green", modifiers = ["italic"] }
 "variable" = "white"
