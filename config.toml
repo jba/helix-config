@@ -9,14 +9,10 @@ auto-info = true
 scrolloff = 4
 mouse = false
 
-[editor.gutters.line-numbers]
-min-width = 1
-
-[editor.soft-wrap]
-enable = true
-
-[editor.lsp]
-display-signature-help-docs = false
+# [editor.cursor-shape]
+# insert = "bar"
+# normal = "block"
+# select = "underline"
 
 [editor.file-picker]
 hidden = false
@@ -24,10 +20,28 @@ git-ignore = false
 git-global = false
 git-exclude = false
 
-# [editor.cursor-shape]
-# insert = "bar"
-# normal = "block"
-# select = "underline"
+[editor.gutters.line-numbers]
+min-width = 1
+
+[editor.indent-guides]
+render = false
+
+[editor.lsp]
+display-messages = true
+display-signature-help-docs = false
+goto-reference-include-declaration = false
+# As of 2024-02-17, inlay hints look like regular text but are not
+# actually in the buffer, so they're very confusing.
+display-inlay-hints = false
+
+[editor.search]
+wrap-around = false
+
+[editor.smart-tab]
+enable = true
+
+[editor.soft-wrap]
+enable = true
 
 [keys.normal]
 "$" = ["ensure_selections_forward", "extend_to_line_end"]
@@ -37,8 +51,25 @@ git-exclude = false
 "C-v" = "page_down"
 "A-v" = "page_up"
 "space" = { o = "file_picker_in_current_buffer_directory" }
+
+# Use shift to extend. The usual meanings of characters replaced
+# below are obtained by typing "+" first; see below.
+H = "extend_char_left"
+L = "extend_char_right"
+J = "extend_line_down"
+K = "extend_line_up"
+W = ["ensure_selections_forward", "extend_next_word_start"]
+E = ["ensure_selections_forward", "extend_next_word_end"]
+B = ["ensure_selections_forward", "flip_selections", "extend_prev_word_start"]
 "S-down" = "extend_line_down"
 "S-up" = "extend_line_up"
+
+[keys.normal."+"]
+w = "move_next_long_word_start"
+e = "move_next_long_word_end"
+b = "move_prev_long_word_start"
+j = "join_selections"
+k = "keep_selections"
 
 [keys.insert]
 "C-f" = "move_char_right"
