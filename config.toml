@@ -8,6 +8,7 @@ auto-reload = true
 auto-info = true
 scrolloff = 4
 mouse = false
+color-modes = true
 
 # Circa late 2023, this didn't work for me and I had
 # to do something in themes/jba.toml.
@@ -38,7 +39,7 @@ goto-reference-include-declaration = false
 display-inlay-hints = false
 
 [editor.search]
-wrap-around = false
+wrap-around = true
 
 [editor.smart-tab]
 enable = true
@@ -53,7 +54,8 @@ enable = true
 # v = { "$" = "extend_to_line_end"}
 "C-v" = "page_down"
 "A-v" = "page_up"
-"space" = { o = "file_picker_in_current_buffer_directory" }
+# "#" = "toggle_comments"
+# "C-c" = 
 
 # Use shift to extend. The usual meanings of characters replaced
 # below are obtained by typing "+" first; see below.
@@ -66,6 +68,11 @@ E = ["ensure_selections_forward", "extend_next_word_end"]
 B = ["ensure_selections_forward", "flip_selections", "extend_prev_word_start"]
 "S-down" = "extend_line_down"
 "S-up" = "extend_line_up"
+
+[keys.normal."space"]
+o = "file_picker_in_current_buffer_directory"
+# This doesn't work:
+# s = ["symbol_picker", "collapse_selection"]
 
 [keys.normal."+"]
 w = "move_next_long_word_start"

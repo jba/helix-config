@@ -1,5 +1,6 @@
 # Based on the default base16 theme obtained with 
 #    wget https://raw.githubusercontent.com/helix-editor/helix/master/base16_theme.toml
+# jba: run `colors` shell function to see color numbers.
 
 "ui.menu" = { fg = "black", bg = "white" }
 # "ui.menu.selected" = { modifiers = ["reversed"] }
@@ -15,7 +16,7 @@
 "ui.cursor" = { fg = "99", modifiers = ["reversed"] }
 "ui.cursor.match" = { fg = "yellow", modifiers = ["underlined"] }
 "ui.cursor.primary.insert" = { fg = "99", modifiers = ["underlined"]}
-"ui.virtual.ruler" = { bg = "gray" }
+"ui.virtual.ruler" = { bg = "234" }
 
 "comment" = { fg = "green", modifiers = ["italic"] }
 "variable" = "white"
