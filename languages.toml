@@ -8,7 +8,7 @@ args = ["-logfile=/tmp/gopls.log", "-v", "-rpc.trace"]
 
 [language-server.gopls.config]
 usePlaceholders = true
-formatting.gofumpt = true
+# formatting.gofumpt = true
 # As of 2024-02-17, all inlay hints are disabled.
 # To get them to appear, you also have to enable them in config.toml.
 hints.assignVariableTypes = false

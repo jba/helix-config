@@ -6,7 +6,7 @@ auto-pairs = true
 auto-save = true
 auto-reload = true
 auto-info = true
-scrolloff = 4
+scrolloff = 3
 mouse = false
 color-modes = true
 
@@ -20,12 +20,12 @@ color-modes = true
 
 [editor.file-picker]
 hidden = false
-git-ignore = false
+git-ignore = true
 git-global = false
-git-exclude = false
+git-exclude = true
 
 [editor.gutters.line-numbers]
-min-width = 1
+min-width = 2
 
 [editor.indent-guides]
 render = false
