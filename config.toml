@@ -2,13 +2,27 @@ theme = "jba"
 
 [editor]
 line-number = "relative"
-auto-pairs = true
-auto-save = true
 auto-reload = true
 auto-info = true
 scrolloff = 3
 mouse = false
 color-modes = true
+cursorline = true
+# This doesn't seem to do anything...
+cursorcolumn = true
+
+[editor.auto-save]
+focus-lost = true
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+# This doesn't work if the character comes from a register.
+# Need to figure out how to type this.
+'«' = '»'
 
 # Circa late 2023, this didn't work for me and I had
 # to do something in themes/jba.toml.
@@ -54,6 +68,9 @@ enable = true
 # v = { "$" = "extend_to_line_end"}
 "C-v" = "page_down"
 "A-v" = "page_up"
+# C-d in normal mode means the same thing as in insert mode, to avoid confusion.
+# (C-v takes over its default meaning)
+"C-d" = "delete_char_forward"
 # "#" = "toggle_comments"
 # "C-c" = 
 
@@ -84,3 +101,10 @@ k = "keep_selections"
 [keys.insert]
 "C-f" = "move_char_right"
 "C-b" = "move_char_left" 
+"C-w" = "normal_mode"
+# I set the g register to « and the h register to », then
+# I use this to enter those characters.
+"C-g" = "insert_register"
+
+# TODO: figure out how to bind inserting this into a key.
+# section character: §
