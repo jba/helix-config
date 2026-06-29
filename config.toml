@@ -2,7 +2,8 @@ theme = "jba"
 
 [editor]
 line-number = "relative"
-auto-reload = true
+# the next line only works in my tweaked version of helix
+# auto-reload = true
 auto-info = true
 scrolloff = 3
 mouse = false
